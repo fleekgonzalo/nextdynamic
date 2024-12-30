@@ -11,6 +11,7 @@ import {
 } from 'utils/blog';
 import { formatNotionDateProperty } from 'utils/general';
 import { TextBlock, getPageDetails, getTextBlocksFromPage } from 'utils/notion';
+export const runtime = 'edge';
 
 type PostParams = { postId: string };
 
