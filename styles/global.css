@@ -1,0 +1,89 @@
+* {
+  cursor: default;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Light Mode (Default) */
+body {
+  @apply bg-lightBackground text-lightText font-sans;
+}
+
+/* Dark Mode */
+body.dark {
+  @apply bg-darkBackground text-darkText font-sans;
+}
+
+/* Header and Card Styles (Consistent Across Modes) */
+header, .card {
+  @apply p-4 rounded-lg;
+}
+
+/* Override Card Colors */
+.card {
+  @apply bg-lightBackground text-lightText;
+}
+
+.dark .card {
+  @apply bg-darkGray text-darkText;
+}
+
+/* Links */
+a {
+  @apply text-primary;
+}
+
+.dark a {
+  @apply text-secondary;
+}
+
+.dark a {
+  color: #ffffff; /* Change to your desired color */
+}
+
+.dark a.underline:hover {
+  font-weight: bold; /* Makes the link bold on hover */
+  color: #ffffff; /* Set the color to white or your desired color */
+}
+
+body.dark a:hover div {
+  font-weight: bold; /* Makes the text bold on hover in dark mode */
+  color: #ffffff; /* Set the color to white or your desired color */
+}
+
+/* Button Styling */
+button {
+  @apply px-4 py-2 rounded bg-primary text-white;
+}
+
+.dark button {
+  @apply bg-darkGray text-secondary;
+}
+
+#theme-toggle path {
+  transition: all 0.3s ease;
+}
+
+a {
+  color: #333333;  /* Dark gray */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #111111;  /* Slightly darker hover effect */
+}
