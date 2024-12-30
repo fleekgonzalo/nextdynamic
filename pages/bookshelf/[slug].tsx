@@ -11,6 +11,7 @@ import {
 } from 'utils/bookshelf';
 import { formatNotionDateProperty } from 'utils/general';
 import { TextBlock, getPageDetails, getTextBlocksFromPage } from 'utils/notion';
+export const runtime = 'edge';
 
 type BookNotesParams = { slug: string };
 
